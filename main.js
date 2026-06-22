@@ -1,8 +1,18 @@
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+const formElement = document.querySelector("#contactForm");
+const messageBox = document.querySelector("#successMsg");
 
-    document.getElementById("successMsg").textContent =
-        "Form submitted successfully!";
+function displayMessage(text) {
+    messageBox.textContent = text;
+}
 
-    this.reset();
+function clearForm() {
+    formElement.reset();
+}
+
+formElement.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    displayMessage("Thank you! Your details have been received.");
+
+    clearForm();
 });
