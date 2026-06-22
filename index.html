@@ -3,27 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Feedback Center</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h2>Contact Form</h2>
+        <h2>Feedback Center</h2>
 
         <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required>
 
-            <input type="email" id="email" placeholder="Your Email" required>
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required
+            >
 
-            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="example@email.com"
+                required
+            >
 
-            <button type="submit">Submit</button>
+            <label for="message">Your Feedback</label>
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Type your feedback here..."
+                required
+            ></textarea>
+
+            <button type="submit">Send Feedback</button>
+
         </form>
 
         <p id="successMsg"></p>
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
